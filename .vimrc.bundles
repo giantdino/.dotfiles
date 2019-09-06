@@ -1,0 +1,70 @@
+call plug#begin('~/.vim/bundle')
+
+  " Big Stuff
+  Plug 'lervag/vimtex'
+  Plug 'scrooloose/nerdtree' 
+  Plug 'jistr/vim-nerdtree-tabs'
+  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'tpope/vim-fugitive'
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'takac/vim-hardtime'
+  " Plug 'majutsushi/tagbar'
+  " Plug 'Valloric/YouCompleteMe'
+  Plug 'ajh17/VimCompletesMe'
+  " Plug 'kiteco/vim-plugin'
+
+  " Theme
+  " Plug 'NLKNguyen/papercolor-theme'
+  " Plug 'flazz/vim-colorschemes'
+  " Plug 'morhetz/gruvbox'
+  Plug 'aonemd/kuroi.vim'
+  Plug 'altercation/vim-colors-solarized'
+
+  " Editing
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-commentary'
+  Plug 'kana/vim-textobj-user'
+  Plug 'kana/vim-textobj-entire'
+  Plug 'michaeljsmith/vim-indent-object'
+  " Plug 'vim-scripts/tComment'
+  Plug 'terryma/vim-multiple-cursors'
+  Plug 'tpope/vim-repeat'
+  Plug 'junegunn/vim-easy-align'
+  Plug 'SirVer/ultisnips'
+  " Plug 'honza/vim-snippets'
+  
+  " Small Visual Help
+  Plug 'nathanaelkane/vim-indent-guides'
+  Plug 'jeffkreeftmeijer/vim-numbertoggle'
+  " Plug 'tmhedberg/SimpylFold'
+
+  " Rails Related
+  Plug 'tpope/vim-bundler'
+  Plug 'tpope/vim-rails'
+
+  " Testing
+  Plug 'tpope/vim-dispatch'
+  Plug 'janko-m/vim-test'
+  Plug 'benmills/vimux'
+
+  " JS
+  Plug 'pangloss/vim-javascript'
+  Plug 'mxw/vim-jsx'
+
+  " HTML Related
+  Plug 'mattn/emmet-vim' " Zen coding html, lots of key map to Ctrl-Y-*
+
+  " IM NOT READY FOR U
+  " Plug 'vim-syntastic/syntastic'
+  " Plug 'tpope/vim-eunuch'
+  
+  Plug 'tmhedberg/SimpylFold'
+  Plug 'hdima/python-syntax'
+
+  Plug 'parkr/vim-jekyll'
+
+call plug#end()
+
+
