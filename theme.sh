@@ -45,11 +45,11 @@ set-option -g message-fg $tm_color_active
 set-option -g display-panes-active-colour $tm_color_active
 set-option -g display-panes-colour $tm_color_inactive
 
-cpu_icon=''
-tm_spotify="#[fg=$tm_color_music,bg=$tm_color_background]#(osascript ~/.tmux/scripts/spotify.scpt)"
+cpu_icon='🚦'
+# tm_spotify="#[fg=$tm_color_music,bg=$tm_color_background]#(osascript ~/.tmux/scripts/spotify.scpt)"
 
 cpu_color=colour167
-tm_cpu="#[bg=default,fg=$cpu_color]$tm_right_separator_black#[bg=$cpu_color,fg=colour7] CPU #(istats cpu temperature --no-graphs --no-labels | python ~/.tmux/scripts/trim.py) #[fg=$tm_color_background,bg=$cpu_color]$tm_right_separator_black"
+# tm_cpu="#[bg=default,fg=$cpu_color]$tm_right_separator_black#[bg=$cpu_color,fg=colour7] CPU #(istats cpu temperature --no-graphs --no-labels | python ~/.tmux/scripts/trim.py) #[fg=$tm_color_background,bg=$cpu_color]$tm_right_separator_black"
 
 battery_icon=''
 # tm_battery="#[fg=colour10,nobold]#{battery_status_bg} #{battery_icon} #{battery_percentage} #{battery_remain} | %a %h/%d %H:%M "
@@ -67,10 +67,14 @@ tm_time="#[bg=default,fg=$time_color]$tm_right_separator_black#[bg=$time_color,f
 tm_session_name="#[bg=$tm_color_feature,fg=colour7,bold] #S #[fg=$tm_color_feature,bg=default,nobold]$tm_left_separator_black "
 
 lc_color=colour137
-tm_lc="#[bg=default,fg=$lc_color]$tm_right_separator_black#[bg=$lc_color,fg=colour7]  #(python ~/.tmux/scripts/lc.py) #[fg=$tm_color_background,bg=$lc_color]$tm_right_separator_black"
+# tm_lc="#[bg=default,fg=$lc_color]$tm_right_separator_black#[bg=$lc_color,fg=colour7]  #(python ~/.tmux/scripts/lc.py) #[fg=$tm_color_background,bg=$lc_color]$tm_right_separator_black"
 
+# tm_memorycolor="#(/usr/local/bin/tmux-mem-cpu-load -c -q -g 3 -m 2 -a 0 | sed -n 's/^.*\(colour[0-9]*\).*$/\1/gp')"
+tm_memory="#(/usr/local/bin/tmux-mem-cpu-load -g 3 -m 2 -a 0 )"
+tm_memory2="#[bg=default,fg=$cpu_color]$tm_right_separator_black#[bg=$cpu_color,fg=colour7]$cpu_icon #(/usr/local/bin/tmux-mem-cpu-load -g 3 -m 2 -a 0 ) #[fg=$tm_color_background,bg=$cpu_color]$tm_right_separator_black"
+# tm_separator = "#[fg=$tm_color_background,bg=$lc_color]$tm_right_separator_black"
 
 set -g status-left $tm_session_name
-set -g status-right "$tm_spotify  $tm_lc$tm_cpu$battery$tm_time"
+set -g status-right "$tm_memory2$battery$tm_time"
 # set -g status-right " $tm_cpu $battery$tm_time"
 
