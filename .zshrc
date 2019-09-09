@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/jjin/.oh-my-zsh"
@@ -90,6 +91,11 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+bindkey -e
+bindkey '[C' forward-word
+bindkey '[D' backward-word
+bindkey 'OC' forward-word
+bindkey 'OD' backward-word
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh

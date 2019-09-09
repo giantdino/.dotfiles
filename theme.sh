@@ -45,7 +45,7 @@ set-option -g message-fg $tm_color_active
 set-option -g display-panes-active-colour $tm_color_active
 set-option -g display-panes-colour $tm_color_inactive
 
-cpu_icon='🚦'
+cpu_icon='☯'
 # tm_spotify="#[fg=$tm_color_music,bg=$tm_color_background]#(osascript ~/.tmux/scripts/spotify.scpt)"
 
 cpu_color=colour167
@@ -54,10 +54,10 @@ cpu_color=colour167
 battery_icon=''
 # tm_battery="#[fg=colour10,nobold]#{battery_status_bg} #{battery_icon} #{battery_percentage} #{battery_remain} | %a %h/%d %H:%M "
 battery_color=colour65
-battery="#[bg=default,fg=$battery_color]$tm_right_separator_black#[bg=$battery_color,fg=colour7] #(pmset -g batt | ruby ~/.tmux/scripts/battery.rb) #[fg=$tm_color_background,bg=$battery_color]$tm_right_separator_black"
+battery="#[bg=default,fg=$battery_color]$tm_right_separator_black#[bg=$battery_color,fg=colour7]#(pmset -g batt | ruby ~/.tmux/scripts/battery.rb) #[fg=$tm_color_background,bg=$battery_color]$tm_right_separator_black"
 
 time_color=colour67
-tm_time="#[bg=default,fg=$time_color]$tm_right_separator_black#[bg=$time_color,fg=colour7]%h/%d(%a) %H:%M #[fg=$tm_color_background,bg=$time_color]$tm_right_separator_black"
+tm_time="#[bg=default,fg=$time_color]$tm_right_separator_black#[bg=$time_color,fg=colour7]◴ %h/%d(%a) %H:%M #[fg=$tm_color_background,bg=$time_color]$tm_right_separator_black"
 # tm_todo_n="#(osascript ~/.tmux/scripts/reminder_count.scpt)"
 # tm_todo_bg="#(~/.tmux/scripts/todo_with_color.sh)"
 
