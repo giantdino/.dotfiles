@@ -3,3 +3,9 @@
 ### View calendars
 cal -A 3 // display monthly calendar for the next 3 months\
 
+### Use terminal based browser
+
+
+### Terminal email client
+mutt
+

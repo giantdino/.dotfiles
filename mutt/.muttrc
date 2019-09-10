@@ -1,0 +1,5 @@
+set smtp_url="smtps://jjin@smtp.microstrategy.com/"
+set folder="imaps://jjin%40microstrategy.com@outlook.office365.com/"
+set spoolfile="+Inbox"
+set postponed="+Drafts"
+set record="+Sent Items"
