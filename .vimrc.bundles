@@ -69,6 +69,9 @@ call plug#begin('~/.vim/bundle')
   Plug 'godlygeek/tabular'
   Plug 'plasticboy/vim-markdown'
 
+  " Swift
+  Plug 'keith/swift.vim'
+
 call plug#end()
 
 

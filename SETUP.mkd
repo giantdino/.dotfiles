@@ -9,3 +9,8 @@ cal -A 3 // display monthly calendar for the next 3 months\
 ### Terminal email client
 mutt
 
+## Mindmap
+https://www.npmjs.com/package/mindmap
+Terminal based mindmap
+
+

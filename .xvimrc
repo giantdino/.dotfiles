@@ -1,0 +1,38 @@
+i kk <Esc>
+set incsearch
+
+" Case-insensitive searching.
+set ignorecase
+
+" But case-sensitive if expression contains a capital letter.
+set smartcase
+
+" Default to global substitutions on lines
+set gdefault
+
+" Use the system pasteboard
+set pasteboard
+
+" Quick command mode
+nnoremap ; :
+
+" Search the string cursor points to. Very Useful.
+map ,s viw:xccmd findSelectedTextInWorkspace<CR>
+
+" Save when esc
+ino <Esc> <Esc>:xcmenucmd Save<CR>
+
+" tab new
+map ,tn :xccmd newTab<CR>
+" tab close
+map ,tc :tabclose<CR>
+" tab pre
+map ,ti :xccmd selectPreviousTab<CR>
+" tab next
+map ,to :xccmd selectNextTab<CR>
+
+nmap gd :xccmd jumpToDefinition<CR>
+map ,o  :xccmd openQuickly<CR>
+map ,f :xccmd goForwardInHistoryByCommand<CR>
+map ,b :xccmd goBackInHistoryByCommand<CR>
+

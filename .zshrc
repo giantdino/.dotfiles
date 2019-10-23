@@ -13,6 +13,7 @@ export ZSH="/Users/jjin/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE="awesome-patched"
 
+export GOPATH="$HOME/Go"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -110,6 +111,9 @@ bindkey 'OD' backward-word
 function tday {
   task $1 modify +daily
 }
+
+alias sclack='cd ~/sclack && ./app.py'
+alias mindmap='.nvm/versions/node/v12.10.0/bin/mindmap'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh

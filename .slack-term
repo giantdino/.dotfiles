@@ -1,0 +1,18 @@
+{
+    "slack_token": "xoxp-13984615488-81793963941-751767230149-10e8c8df9cc51b89b5f792636072bc86",
+
+    "sidebar_width": 3, 
+
+    "theme": {
+        "channel": {
+            "prefix": "",
+            "icon": "",
+            "text": "cyan"
+        },
+        "message": {
+            "time": "green",
+            "name": "yellow",
+            "text": ""
+        }
+    }
+}

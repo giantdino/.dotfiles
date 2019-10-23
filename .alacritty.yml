@@ -1,0 +1,7 @@
+key_bindings:
+  # (macOS only)
+  #- { key: Key0,   mods: Command, action: ResetFontSize    }
+  - { key: c,        mods: Alt, chars: "\x1bc",                }
+  - { key: d,        mods: Alt, chars: "\x1bd",                }
+  - { key: C,        mods: Alt, chars: "\x1bW",                }
+  - { key: D,        mods: Alt, chars: "\x1bw",                }
