@@ -2,26 +2,24 @@ Install new linux:
 1. Install chrome, vlc
 2. upgrade system (sudo apt-get update, sudo apt-get upgrade)
 3. Install Albert
-For xUbuntu 18.04 run the following:
-Keep in mind that the owner of the key may distribute updates, packages and repositories that your system will trust (more information).
-sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /' > /etc/apt/sources.list.d/home:manuelschneid3r.list"
-wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_18.04/Release.key -O Release.key
-sudo apt-key add - < Release.key
-sudo apt-get update
-sudo apt-get install albert
-(https://software.opensuse.org/download.html?project=home:manuelschneid3r&package=albert)
-
+sudo apt update
+sudo apt install gdebi
+wget https://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/amd64/albert_0.16.1_amd64.deb
+sudo gdebi albert_0.16.1_amd64.deb
  4. install ranger
  5. install i3
- 6. sudo apt-get install ubuntu-restriced-extras (for vlc play mp4)
+ sudo apt-get install i3
+ sudo apt-get install feh
 
+ 
+ 6. sudo apt-get install ubuntu-restriced-extras (for vlc play mp4)
  7. install zsh
 sudo apt install zsh
 sudo apt-get install powerline fonts-powerline
-copy .zshrc from github
+copy .zshrc from github (ln -s )
 sudo apt install git
-git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zshgit 
-git clone https://github.com/zsh-users/zsh-syntax-highting.git
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 $ZSH_CUSTOM = ~/.oh-my-zsh/custom
@@ -31,5 +29,12 @@ ubuntu change terminal profile to select MesloLGS NF font
 p10k configure
 
 8. install tmux
+ln -s .dotfiles/.tmux.conf .tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux
+c-a I to install plugins
 
+9. install barrier
+10. install tonadio
+11. install git
 
