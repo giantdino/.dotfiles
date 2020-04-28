@@ -1,0 +1,102 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        colors = true
+        interval = 5
+}
+
+order += "ipv6"
+order += "disk /"
+order += "disk /media/jimmy/D400"
+order += "disk /media/jimmy/D1000"
+order += "disk /media/jimmy/D2000"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "cpu_temperature 0"
+order += "cpu_temperature 1"
+order += "cpu_temperature 2"
+order += "cpu_temperature 3"
+order += "cpu_usage"
+order += "memory"
+order += "load"
+order += "tztime local"
+
+wireless _first_ {
+        format_up = "W:(%quality at %essid) %ip"
+        format_down = "W:down"
+}
+
+ethernet _first_ {
+        # if you use %speed, i3status requires root privileges
+        format_up = "E:%ip"
+        format_down = "E:down"
+}
+
+battery all {
+        format = "%status %percentage %remaining"
+}
+
+tztime local {
+        format = "%m/%d %H:%M"
+}
+
+cpu_temperature 0 {
+	format = "0:%degrees° "
+	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp2_input"
+	max_threshold = 95
+}
+
+cpu_temperature 1 {
+	format = "1:%degrees° "
+	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp3_input"
+	max_threshold = 95
+}
+
+cpu_temperature 2 {
+	format = "2:%degrees° "
+	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp4_input"
+	max_threshold = 95
+}
+
+cpu_temperature 3 {
+	format = "3:%degrees° "
+	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp5_input"
+	max_threshold = 95
+}
+
+cpu_usage {
+	format = "U:%usage"
+}
+
+memory {
+    format = "%free (%used/%available)"
+    threshold_degraded = "10%"
+    format_degraded = "MEMORY: %free"
+}
+
+load {
+        format = "%1min"
+}
+
+disk "/" {
+        format = "%avail/%total"
+}
+
+disk "/media/jimmy/D400" {
+    format = "%avail/%total"
+}
+
+disk "/media/jimmy/D1000" {
+    format = "%avail/%total"
+}
+
+disk "/media/jimmy/D2000" {
+    format = "%avail/%total"
+}
+
