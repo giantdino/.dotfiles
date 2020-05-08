@@ -57,7 +57,7 @@ battery_color=colour65
 battery="#[bg=default,fg=$battery_color]$tm_right_separator_black#[bg=$battery_color,fg=colour7]#(pmset -g batt | ruby ~/.tmux/scripts/battery.rb) #[fg=$tm_color_background,bg=$battery_color]$tm_right_separator_black"
 
 time_color=colour67
-tm_time="#[bg=default,fg=$time_color]$tm_right_separator_black#[bg=$time_color,fg=colour7]◴ %h/%d(%a) %H:%M #[fg=$tm_color_background,bg=$time_color]$tm_right_separator_black"
+tm_time="#[bg=default,fg=$time_color]$tm_right_separator_black#[bg=$time_color,fg=colour7]◴ %m/%d(%a) %H:%M #[fg=$tm_color_background,bg=$time_color]$tm_right_separator_black"
 # tm_todo_n="#(osascript ~/.tmux/scripts/reminder_count.scpt)"
 # tm_todo_bg="#(~/.tmux/scripts/todo_with_color.sh)"
 
